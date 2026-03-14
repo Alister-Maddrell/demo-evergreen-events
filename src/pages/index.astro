@@ -3,29 +3,38 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Evergreen Events — Your Day, Designed">
   <!-- Hero -->
-  <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=80" alt="Couple walking through a sun-drenched garden on their wedding day" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
+  <section class="relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden">
+    <!-- Slideshow -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=80" alt="Couple walking through a sun-drenched garden on their wedding day" class="w-full h-full object-cover" />
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=1920&h=1080&fit=crop&q=80" alt="Bride holding a white bouquet at an outdoor ceremony" class="w-full h-full object-cover" />
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=1920&h=1080&fit=crop&q=80" alt="Wedding reception with elegant table settings" class="w-full h-full object-cover" />
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1920&h=1080&fit=crop&q=80" alt="Beautifully styled dinner table with floral centrepieces" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/40"></div>
     <div class="relative text-center text-white px-6 max-w-3xl">
       <p class="section-label !text-white/70 mb-4">Sydney's Award-Winning Event Studio</p>
-      <h1 class="font-heading-italic text-5xl sm:text-6xl md:text-7xl mb-6">Your Day, Designed</h1>
+      <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-8xl mb-6">Your Day, Designed</h1>
       <p class="text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-xl mx-auto">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/enquiry" class="btn-sage">Start Planning</a>
-        <a href="/enquiry#booking" class="btn-outline-ev !border-white/40 !text-white hover:!border-white hover:!text-white">Book a Discovery Call</a>
-      </div>
+      <a href="/enquiry" class="btn-sage">Start Planning</a>
     </div>
   </section>
 
   <!-- As Featured In -->
-  <section class="py-14 bg-white border-y border-[var(--color-border)]">
+  <section class="py-20 bg-white border-y border-[var(--color-border)]">
     <div class="max-w-5xl mx-auto px-6">
       <p class="text-center text-xs font-semibold tracking-[3px] uppercase text-[var(--color-text-secondary)] mb-8">As Featured In</p>
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
-        <span class="font-heading-italic text-2xl text-[var(--color-text-secondary)]/60">Vogue Bride</span>
-        <span class="font-heading-italic text-2xl text-[var(--color-text-secondary)]/60">Hello May</span>
+        <span class="font-heading-italic text-3xl text-[var(--color-text-secondary)]/60">Vogue Bride</span>
+        <span class="font-heading text-xl tracking-[4px] uppercase text-[var(--color-text-secondary)]/60">Hello May</span>
         <span class="font-heading-italic text-2xl text-[var(--color-text-secondary)]/60">Nouba</span>
-        <span class="font-heading-italic text-2xl text-[var(--color-text-secondary)]/60">The Lane</span>
+        <span class="font-heading text-lg tracking-[6px] uppercase font-semibold text-[var(--color-text-secondary)]/60">The Lane</span>
       </div>
     </div>
   </section>
@@ -38,21 +47,21 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="font-heading text-4xl md:text-5xl">Events Worth Remembering</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/services" class="group reveal">
+        <a href="/services" class="group reveal stagger-1">
           <div class="aspect-[3/4] overflow-hidden mb-6">
             <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=600&h=800&fit=crop&q=80" alt="Bride holding a white bouquet at an outdoor ceremony" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <h3 class="font-heading text-2xl mb-2">Weddings</h3>
           <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">From intimate garden ceremonies to grand harbour-side receptions — we bring your love story to life with beauty and precision.</p>
         </a>
-        <a href="/services" class="group reveal">
+        <a href="/services" class="group reveal stagger-2">
           <div class="aspect-[3/4] overflow-hidden mb-6">
             <img src="https://images.unsplash.com/photo-1766164416026-1a823688d106?w=600&h=800&fit=crop&q=80" alt="Elegant corporate dining setup with candles and place settings" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <h3 class="font-heading text-2xl mb-2">Corporate Events</h3>
           <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">Launches, galas, and brand activations designed to impress — polished production with personality.</p>
         </a>
-        <a href="/services" class="group reveal">
+        <a href="/services" class="group reveal stagger-3">
           <div class="aspect-[3/4] overflow-hidden mb-6">
             <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=600&h=800&fit=crop&q=80" alt="Beautifully styled private dinner table with floral centrepieces" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
@@ -66,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Featured Wedding -->
   <section class="py-24 bg-[var(--color-cream)]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="reveal">
           <div class="aspect-[4/5] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=800&h=1000&fit=crop&q=80" alt="Sarah and James on their wedding day by Sydney Harbour" class="w-full h-full object-cover" loading="lazy" />
@@ -80,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-[var(--color-text-secondary)] leading-relaxed mb-4">What began as a vision for an intimate 80-guest celebration along Sydney Harbour became a breathtaking afternoon of coastal elegance — from the white orchid arch framing the Harbour Bridge to the candlelit reception at Sergeants' Mess.</p>
           <p class="text-[var(--color-text-secondary)] leading-relaxed mb-8">Every detail was thoughtfully curated: hand-lettered calligraphy, a bespoke floral palette of ivory roses and silver-dollar eucalyptus, and a three-course menu by Matt Moran's team. The result? An effortless, magazine-worthy day that felt unmistakably <em>them</em>.</p>
           <div class="flex flex-wrap gap-4">
-            <a href="/portfolio" class="btn-outline-ev">View Full Gallery →</a>
+            <a href="/portfolio" class="btn-outline-ev">View Full Gallery</a>
             <a href="/enquiry#booking" class="btn-sage">Book a Discovery Call</a>
           </div>
         </div>
@@ -89,24 +98,42 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Testimonial -->
-  <section class="py-24 px-6">
+  <section class="py-32 px-6">
     <div class="max-w-3xl mx-auto text-center reveal">
       <svg class="mx-auto mb-8 text-[var(--color-sage-light)]" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.68 11 13.173 11 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.68 21 13.173 21 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179z"/></svg>
       <blockquote class="font-heading-italic text-2xl md:text-3xl leading-relaxed mb-8">"From the first meeting to the last dance, the Evergreen team made everything feel effortless. Our wedding was beyond anything we imagined — elegant, personal, and absolutely magical."</blockquote>
-      <p class="text-sm font-semibold tracking-[2px] uppercase text-[var(--color-sage)]">Sarah &amp; James Whitfield</p>
+      <p class="text-sm font-semibold tracking-[2px] uppercase text-[var(--color-sage-light)]">Sarah &amp; James Whitfield</p>
       <p class="text-xs text-[var(--color-text-secondary)] mt-1">Sergeants' Mess, Mosman — March 2025</p>
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="py-24 bg-[var(--color-sage)] text-white">
-    <div class="max-w-2xl mx-auto px-6 text-center reveal">
-      <h2 class="font-heading-italic text-3xl md:text-4xl mb-4">Stay Inspired</h2>
-      <p class="text-white/70 mb-8">Seasonal styling ideas, real wedding features, and planning tips — delivered monthly.</p>
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="https://formspree.io/f/placeholder" method="POST">
-        <input type="email" name="email" required placeholder="your@email.com" class="flex-1 px-4 py-3 bg-white/15 border border-white/20 text-white placeholder:text-white/50 text-sm focus:outline-none focus:border-white/50" />
-        <button type="submit" class="px-6 py-3 bg-white text-[var(--color-sage-dark)] text-xs font-bold tracking-[2px] uppercase hover:bg-[var(--color-cream)] transition-colors">Subscribe</button>
-      </form>
+  <!-- Instagram Feed -->
+  <section class="py-24 px-6 bg-[var(--color-cream)]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <p class="section-label mb-3">Instagram</p>
+        <h2 class="font-heading-italic text-3xl md:text-4xl">Follow Along <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-sage)] transition-colors">@evergreenevents_</a></h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-1">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop&q=80" alt="Instagram post — wedding couple" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-1">
+          <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=400&h=400&fit=crop&q=80" alt="Instagram post — bridal bouquet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-2">
+          <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=400&h=400&fit=crop&q=80" alt="Instagram post — reception setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-2">
+          <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=400&h=400&fit=crop&q=80" alt="Instagram post — table styling" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-3">
+          <img src="https://images.unsplash.com/photo-1766164416026-1a823688d106?w=400&h=400&fit=crop&q=80" alt="Instagram post — corporate event" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="aspect-square overflow-hidden group reveal stagger-3">
+          <img src="https://images.unsplash.com/photo-1521543832500-49e69fb2bea2?w=400&h=400&fit=crop&q=80" alt="Instagram post — floral arrangement" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

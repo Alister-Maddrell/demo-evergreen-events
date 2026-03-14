@@ -10,22 +10,6 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-[var(--color-text-secondary)] max-w-xl mx-auto">Tell us about your event and we'll be in touch within 24 hours to arrange a complimentary consultation.</p>
       </div>
 
-      <!-- CAL.COM BOOKING -->
-      <div id="booking" class="max-w-2xl mx-auto mb-20 reveal">
-        <div class="text-center mb-10">
-          <p class="section-label mb-3">Book a Call</p>
-          <h2 class="font-heading text-3xl md:text-4xl mb-4">Schedule a Discovery Call</h2>
-          <p class="text-[var(--color-text-secondary)] max-w-lg mx-auto text-sm leading-relaxed">Pick a time for a free 30-minute call to discuss your event vision, budget, and next steps.</p>
-        </div>
-        <div id="cal-embed" style="width:100%; min-height:450px; overflow:auto; border: 1px solid var(--color-border); background: white;"></div>
-      </div>
-
-      <div class="flex items-center justify-center gap-4 mb-16">
-        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
-        <span class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)]">Or send a message</span>
-        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
-      </div>
-
       <div id="enquiry-form" class="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <!-- Form -->
         <div class="lg:col-span-3 reveal">
@@ -36,18 +20,8 @@ import Layout from '../layouts/Layout.astro';
                 <input type="text" id="name" name="name" required class="form-input" />
               </div>
               <div>
-                <label for="partner" class="form-label">Partner's Name</label>
-                <input type="text" id="partner" name="partner" class="form-input" />
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
                 <label for="email" class="form-label">Email *</label>
                 <input type="email" id="email" name="email" required class="form-input" />
-              </div>
-              <div>
-                <label for="phone" class="form-label">Phone</label>
-                <input type="tel" id="phone" name="phone" class="form-input" />
               </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -62,53 +36,13 @@ import Layout from '../layouts/Layout.astro';
                 </select>
               </div>
               <div>
-                <label for="guests" class="form-label">Estimated Guest Count</label>
-                <select id="guests" name="guest_count" class="form-select">
-                  <option value="" disabled selected>Select range</option>
-                  <option value="under-50">Under 50</option>
-                  <option value="50-100">50 – 100</option>
-                  <option value="100-150">100 – 150</option>
-                  <option value="150-200">150 – 200</option>
-                  <option value="200+">200+</option>
-                </select>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
                 <label for="date" class="form-label">Preferred Date</label>
                 <input type="date" id="date" name="event_date" class="form-input" />
               </div>
-              <div>
-                <label for="venue" class="form-label">Venue (if confirmed)</label>
-                <input type="text" id="venue" name="venue" class="form-input" placeholder="e.g. Sergeants' Mess" />
-              </div>
-            </div>
-            <div>
-              <label for="budget" class="form-label">Budget Range</label>
-              <select id="budget" name="budget" class="form-select">
-                <option value="" disabled selected>Select range</option>
-                <option value="under-10k">Under $10,000</option>
-                <option value="10k-25k">$10,000 – $25,000</option>
-                <option value="25k-50k">$25,000 – $50,000</option>
-                <option value="50k-100k">$50,000 – $100,000</option>
-                <option value="100k+">$100,000+</option>
-              </select>
             </div>
             <div>
               <label for="vision" class="form-label">Tell Us About Your Vision</label>
               <textarea id="vision" name="vision" rows="5" class="form-input" placeholder="Describe your dream event — the mood, the style, any must-haves..."></textarea>
-            </div>
-            <div>
-              <label for="referral" class="form-label">How Did You Hear About Us?</label>
-              <select id="referral" name="referral" class="form-select">
-                <option value="" disabled selected>Select one</option>
-                <option value="instagram">Instagram</option>
-                <option value="google">Google Search</option>
-                <option value="referral">Friend / Family Referral</option>
-                <option value="venue">Venue Recommendation</option>
-                <option value="publication">Magazine / Blog</option>
-                <option value="other">Other</option>
-              </select>
             </div>
             <button type="submit" class="btn-sage w-full sm:w-auto">Send Enquiry</button>
           </form>
@@ -119,6 +53,14 @@ import Layout from '../layouts/Layout.astro';
           <div class="aspect-[3/4] overflow-hidden mb-8">
             <img src="https://images.unsplash.com/photo-1521543832500-49e69fb2bea2?w=600&h=800&fit=crop&q=80" alt="Bride holding a lush floral bouquet of white and blush roses" class="w-full h-full object-cover" loading="lazy" />
           </div>
+
+          <!-- Mini testimonial -->
+          <div class="bg-[var(--color-cream)] p-6 mb-8">
+            <svg class="mb-3 text-[var(--color-sage-light)]" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.68 11 13.173 11 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.68 21 13.173 21 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179z"/></svg>
+            <p class="font-heading-italic text-lg leading-relaxed mb-3">"The entire process was seamless. From our first call, we knew we were in the best hands."</p>
+            <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-sage-light)]">Mia &amp; Lachlan</p>
+          </div>
+
           <div class="space-y-5 text-sm">
             <div>
               <h3 class="font-semibold text-xs tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-2">Studio</h3>
@@ -132,12 +74,24 @@ import Layout from '../layouts/Layout.astro';
               <h3 class="font-semibold text-xs tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-2">Email</h3>
               <a href="mailto:hello@evergreenevents.com.au" class="hover:text-[var(--color-sage)] transition-colors">hello@evergreenevents.com.au</a>
             </div>
-            <div>
-              <h3 class="font-semibold text-xs tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-2">Instagram</h3>
-              <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-sage)] transition-colors">@evergreenevents_</a>
-            </div>
           </div>
         </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-4 my-16">
+        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
+        <span class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)]">Or book a call directly</span>
+        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
+      </div>
+
+      <!-- CAL.COM BOOKING -->
+      <div id="booking" class="max-w-2xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <p class="section-label mb-3">Book a Call</p>
+          <h2 class="font-heading text-3xl md:text-4xl mb-4">Schedule a Discovery Call</h2>
+          <p class="text-[var(--color-text-secondary)] max-w-lg mx-auto text-sm leading-relaxed">Pick a time for a free 30-minute call to discuss your event vision, budget, and next steps.</p>
+        </div>
+        <div id="cal-embed" style="width:100%; min-height:450px; overflow:auto; border: 1px solid var(--color-border); background: white;"></div>
       </div>
     </div>
   </section>

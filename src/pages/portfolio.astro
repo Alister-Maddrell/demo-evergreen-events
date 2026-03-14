@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 
 const projects = [
-  { name: "Sarah & James", type: "wedding", venue: "Sergeants' Mess, Mosman", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=800&fit=crop&q=80" },
-  { name: "Annual Gala 2025", type: "corporate", venue: "Doltone House, Pyrmont", image: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=1200&h=800&fit=crop&q=80" },
-  { name: "Mia & Lachlan", type: "wedding", venue: "Gunners' Barracks, Georges Heights", image: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=1200&h=800&fit=crop&q=80" },
-  { name: "Harper's 40th", type: "private", venue: "Chiswick, Woollahra", image: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1200&h=800&fit=crop&q=80" },
-  { name: "Emma & David", type: "wedding", venue: "Taronga Centre, Mosman", image: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=1200&h=800&fit=crop&q=80" },
-  { name: "Brand Launch — Aēsop", type: "corporate", venue: "Carriageworks, Eveleigh", image: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=1200&h=800&fit=crop&q=80" },
+  { name: "Sarah & James", type: "wedding", venue: "Sergeants' Mess, Mosman", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=700&h=930&fit=crop&q=80", full: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=800&fit=crop&q=80", ratio: "3/4" },
+  { name: "Annual Gala 2025", type: "corporate", venue: "Doltone House, Pyrmont", image: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=700&h=525&fit=crop&q=80", full: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=1200&h=800&fit=crop&q=80", ratio: "4/3" },
+  { name: "Mia & Lachlan", type: "wedding", venue: "Gunners' Barracks, Georges Heights", image: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=700&h=930&fit=crop&q=80", full: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=1200&h=800&fit=crop&q=80", ratio: "3/4" },
+  { name: "Harper's 40th", type: "private", venue: "Chiswick, Woollahra", image: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=700&h=525&fit=crop&q=80", full: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1200&h=800&fit=crop&q=80", ratio: "4/3" },
+  { name: "Emma & David", type: "wedding", venue: "Taronga Centre, Mosman", image: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=700&h=930&fit=crop&q=80", full: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=1200&h=800&fit=crop&q=80", ratio: "3/4" },
+  { name: "Brand Launch — Aesop", type: "corporate", venue: "Carriageworks, Eveleigh", image: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=700&h=525&fit=crop&q=80", full: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=1200&h=800&fit=crop&q=80", ratio: "4/3" },
 ];
 ---
 <Layout title="Portfolio — Evergreen Events">
@@ -20,27 +20,26 @@ const projects = [
     </div>
   </section>
 
-  <!-- Filters -->
-  <section class="px-6 pb-12">
-    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2">
-      <button class="filter-tab active" data-filter="all">All</button>
-      <button class="filter-tab" data-filter="wedding">Weddings</button>
-      <button class="filter-tab" data-filter="corporate">Corporate</button>
-      <button class="filter-tab" data-filter="private">Private</button>
-    </div>
-  </section>
-
   <!-- Grid -->
   <section class="px-6 pb-24">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="portfolio-grid">
-      {projects.map((p) => (
-        <div class="portfolio-item aspect-square reveal" data-type={p.type} data-full={p.full} data-name={p.name} data-venue={p.venue}>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+      {projects.map((p, i) => (
+        <div class={`portfolio-item reveal stagger-${(i % 3) + 1}`} style={`aspect-ratio: ${p.ratio};`} data-type={p.type} data-full={p.full} data-name={p.name} data-venue={p.venue}>
           <img src={p.image} alt={`${p.name} — ${p.venue}`} loading="lazy" />
           <div class="portfolio-overlay">
-            <h3 class="font-heading-italic text-2xl mb-1">{p.name}</h3>
-            <p class="text-xs tracking-[2px] uppercase text-white/70">{p.type}</p>
-            <p class="text-sm mt-2 text-white/80">{p.venue}</p>
+            <div class="overlay-text">
+              <p class="text-xs tracking-[2px] uppercase text-white/70">{p.type}</p>
+            </div>
           </div>
+        </div>
+      ))}
+    </div>
+    <!-- Project info shown beneath images -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-0" id="portfolio-labels">
+      {projects.map((p) => (
+        <div class="pt-3">
+          <h3 class="font-heading-italic text-xl">{p.name}</h3>
+          <p class="text-[0.625rem] tracking-[3px] uppercase text-[var(--color-text-secondary)] mt-1">{p.venue}</p>
         </div>
       ))}
     </div>
@@ -68,25 +67,13 @@ const projects = [
   </div>
 
   <script>
-    // Filters
-    const tabs = document.querySelectorAll('.filter-tab');
-    const items = document.querySelectorAll('.portfolio-item');
-    tabs.forEach(tab => tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const filter = tab.getAttribute('data-filter');
-      items.forEach(item => {
-        const match = filter === 'all' || item.getAttribute('data-type') === filter;
-        (item as HTMLElement).style.display = match ? '' : 'none';
-      });
-    }));
-
     // Lightbox
     const lightbox = document.getElementById('lightbox')!;
     const lbImg = document.getElementById('lightbox-img') as HTMLImageElement;
     const lbName = document.getElementById('lightbox-name')!;
     const lbVenue = document.getElementById('lightbox-venue')!;
     const lbClose = lightbox.querySelector('.lightbox-close')!;
+    const items = document.querySelectorAll('.portfolio-item');
 
     items.forEach(item => item.addEventListener('click', () => {
       lbImg.src = item.getAttribute('data-full') || '';

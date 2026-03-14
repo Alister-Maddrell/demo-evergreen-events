@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const faqs = [
-  { q: "How far in advance should we book?", a: "We recommend reaching out 12–18 months before your wedding date, or 3–6 months for corporate and private events. That said, we've pulled off beautiful events on shorter timelines — don't hesitate to enquire." },
+  { q: "How far in advance should we book?", a: "We recommend reaching out 12-18 months before your wedding date, or 3-6 months for corporate and private events. That said, we've pulled off beautiful events on shorter timelines — don't hesitate to enquire." },
   { q: "Do you work with specific venues?", a: "We're venue-agnostic and love discovering new spaces. We've designed events at over 60 venues across Sydney and regional NSW, from heritage estates to modern waterfront spaces. We're happy to recommend venues that suit your style and budget." },
   { q: "Can we customise a package?", a: "Absolutely. Our packages are starting points — we tailor every engagement to fit your needs. During our discovery session, we'll build a scope and quote that's right for you." },
   { q: "What's included in 'on-the-day' coordination?", a: "Our coordination package covers a detailed run sheet, vendor confirmations, venue walk-through, a full rehearsal, and 10+ hours of on-site management on your event day. We handle every logistical detail so you can be fully present." },
@@ -28,7 +28,7 @@ const faqs = [
       </div>
       <div class="relative pl-16">
         <div class="timeline-line"></div>
-        <div class="space-y-12">
+        <div class="space-y-16">
           <div class="flex gap-6 reveal">
             <div class="timeline-dot">1</div>
             <div class="pt-2">
@@ -62,62 +62,79 @@ const faqs = [
     </div>
   </section>
 
-  <!-- Packages -->
+  <!-- Packages — Narrative Full-Width -->
   <section class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 reveal">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-20 reveal">
         <p class="section-label mb-3">Packages</p>
         <h2 class="font-heading text-3xl md:text-4xl">Choose Your Level of Support</h2>
         <p class="text-[var(--color-text-secondary)] mt-4 max-w-xl mx-auto">Every package is fully customisable. Pricing is a guide — we'll tailor a quote after our initial consultation.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Coordination -->
-        <div class="package-card text-center reveal">
-          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Coordination</p>
-          <h3 class="font-heading text-3xl mb-1">From $3,500</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] mb-8">Perfect for couples who have planned their event but need expert management on the day.</p>
-          <ul class="text-sm text-left space-y-3 mb-10">
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Detailed event run sheet</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Vendor confirmation &amp; briefing</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Venue walk-through &amp; rehearsal</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>10 hours on-site management</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Emergency kit &amp; contingency planning</li>
-          </ul>
-          <a href="/enquiry" class="btn-outline-ev w-full">Enquire Now</a>
-        </div>
-        <!-- Partial Planning -->
-        <div class="package-card popular text-center reveal">
-          <span class="inline-block px-4 py-1 bg-[var(--color-sage)] text-white text-[0.625rem] font-bold tracking-[2px] uppercase mb-6">Most Popular</span>
-          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Partial Planning</p>
-          <h3 class="font-heading text-3xl mb-1">From $7,500</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] mb-8">For those who want guidance on key decisions while handling some elements themselves.</p>
-          <ul class="text-sm text-left space-y-3 mb-10">
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Everything in Coordination</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Venue &amp; vendor recommendations</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Design concept &amp; mood boards</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Budget management</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Monthly planning check-ins</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Floor plan &amp; styling direction</li>
-          </ul>
-          <a href="/enquiry" class="btn-sage w-full">Enquire Now</a>
-        </div>
-        <!-- Full Design -->
-        <div class="package-card text-center reveal">
-          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Full Design</p>
-          <h3 class="font-heading text-3xl mb-1">From $15,000</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] mb-8">The complete Evergreen experience — from concept to confetti, we handle everything.</p>
-          <ul class="text-sm text-left space-y-3 mb-10">
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Everything in Partial Planning</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Full design &amp; creative direction</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Vendor sourcing &amp; contracting</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Stationery &amp; signage design</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Guest experience curation</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Unlimited planning sessions</li>
-            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Post-event wrap &amp; returns</li>
-          </ul>
-          <a href="/enquiry" class="btn-outline-ev w-full">Enquire Now</a>
-        </div>
+
+      <!-- Coordination -->
+      <div class="mb-20 reveal">
+        <p class="section-label mb-4">On-the-Day</p>
+        <h3 class="font-heading-italic text-4xl mb-1">Coordination</h3>
+        <p class="font-heading-italic text-4xl text-[var(--color-sage)] mb-6">From $3,500</p>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-2xl">Perfect for couples who have planned their event but need expert management on the day. We step in to ensure every detail runs smoothly, so you can be fully present.</p>
+        <ul class="space-y-3 text-sm text-[var(--color-text-secondary)] mb-10 max-w-2xl">
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Detailed event run sheet</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Vendor confirmation &amp; briefing</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Venue walk-through &amp; rehearsal</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>10 hours on-site management</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Emergency kit &amp; contingency planning</li>
+        </ul>
+        <a href="/enquiry" class="btn-sage">Enquire Now</a>
       </div>
+
+      <hr class="border-t border-[var(--color-border)] mb-20" />
+
+      <!-- Partial Planning -->
+      <div class="mb-20 reveal">
+        <p class="section-label mb-4">Design + Coordination</p>
+        <h3 class="font-heading-italic text-4xl mb-1">Partial Planning</h3>
+        <p class="font-heading-italic text-4xl text-[var(--color-sage)] mb-6">From $7,500</p>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-2xl">For those who want guidance on key decisions while handling some elements themselves. We bring creative direction and vendor expertise to elevate your planning.</p>
+        <ul class="space-y-3 text-sm text-[var(--color-text-secondary)] mb-10 max-w-2xl">
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Everything in Coordination</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Venue &amp; vendor recommendations</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Design concept &amp; mood boards</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Budget management</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Monthly planning check-ins</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Floor plan &amp; styling direction</li>
+        </ul>
+        <a href="/enquiry" class="btn-sage">Enquire Now</a>
+      </div>
+
+      <hr class="border-t border-[var(--color-border)] mb-20" />
+
+      <!-- Full Design -->
+      <div class="mb-20 reveal">
+        <p class="section-label mb-4">The Complete Experience</p>
+        <h3 class="font-heading-italic text-4xl mb-1">Full Design</h3>
+        <p class="font-heading-italic text-4xl text-[var(--color-sage)] mb-6">From $15,000</p>
+        <p class="text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-2xl">The complete Evergreen experience — from concept to confetti, we handle everything. Ideal for couples who want a truly bespoke, stress-free journey to their dream day.</p>
+        <ul class="space-y-3 text-sm text-[var(--color-text-secondary)] mb-10 max-w-2xl">
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Everything in Partial Planning</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Full design &amp; creative direction</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Vendor sourcing &amp; contracting</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Stationery &amp; signage design</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Guest experience curation</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Unlimited planning sessions</li>
+          <li class="flex gap-3"><span class="text-[var(--color-charcoal)]">—</span>Post-event wrap &amp; returns</li>
+        </ul>
+        <a href="/enquiry" class="btn-sage">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial between packages and FAQ -->
+  <section class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <svg class="mx-auto mb-8 text-[var(--color-sage-light)]" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.68 11 13.173 11 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.68 21 13.173 21 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179z"/></svg>
+      <blockquote class="font-heading-italic text-2xl md:text-3xl leading-relaxed mb-8">"The Evergreen team understood our vision from day one. They transformed an empty warehouse into the most beautiful event space — our guests are still talking about it."</blockquote>
+      <p class="text-sm font-semibold tracking-[2px] uppercase text-[var(--color-sage-light)]">Harper Sinclair</p>
+      <p class="text-xs text-[var(--color-text-secondary)] mt-1">Chiswick, Woollahra — November 2024</p>
     </div>
   </section>
 

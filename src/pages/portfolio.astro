@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  { name: "Sarah & James", type: "wedding", venue: "Sergeants' Mess, Mosman", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=800&fit=crop&q=80" },
+  { name: "Annual Gala 2025", type: "corporate", venue: "Doltone House, Pyrmont", image: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1763231575952-98244918f99b?w=1200&h=800&fit=crop&q=80" },
+  { name: "Mia & Lachlan", type: "wedding", venue: "Gunners' Barracks, Georges Heights", image: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=1200&h=800&fit=crop&q=80" },
+  { name: "Harper's 40th", type: "private", venue: "Chiswick, Woollahra", image: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1200&h=800&fit=crop&q=80" },
+  { name: "Emma & David", type: "wedding", venue: "Taronga Centre, Mosman", image: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=1200&h=800&fit=crop&q=80" },
+  { name: "Brand Launch — Aēsop", type: "corporate", venue: "Carriageworks, Eveleigh", image: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=700&h=700&fit=crop&q=80", full: "https://images.unsplash.com/photo-1766164416026-1a823688d106?w=1200&h=800&fit=crop&q=80" },
+];
+---
+<Layout title="Portfolio — Evergreen Events">
+  <!-- Hero -->
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="section-label mb-3">Our Work</p>
+      <h1 class="font-heading text-4xl md:text-5xl mb-4">Portfolio</h1>
+      <p class="text-[var(--color-text-secondary)] max-w-xl mx-auto">A curated collection of weddings, corporate events, and private celebrations we've had the privilege of designing.</p>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="px-6 pb-12">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="wedding">Weddings</button>
+      <button class="filter-tab" data-filter="corporate">Corporate</button>
+      <button class="filter-tab" data-filter="private">Private</button>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="px-6 pb-24">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="portfolio-grid">
+      {projects.map((p) => (
+        <div class="portfolio-item aspect-square reveal" data-type={p.type} data-full={p.full} data-name={p.name} data-venue={p.venue}>
+          <img src={p.image} alt={`${p.name} — ${p.venue}`} loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3 class="font-heading-italic text-2xl mb-1">{p.name}</h3>
+            <p class="text-xs tracking-[2px] uppercase text-white/70">{p.type}</p>
+            <p class="text-sm mt-2 text-white/80">{p.venue}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-[var(--color-cream)] text-center px-6">
+    <div class="max-w-2xl mx-auto reveal">
+      <h2 class="font-heading-italic text-3xl md:text-4xl mb-4">Love What You See?</h2>
+      <p class="text-[var(--color-text-secondary)] mb-8">Let's create something beautiful together. Tell us about your vision.</p>
+      <a href="/enquiry" class="btn-sage">Make an Enquiry</a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" class="w-full" />
+      <div class="mt-4 text-center text-white">
+        <h3 class="font-heading-italic text-2xl" id="lightbox-name"></h3>
+        <p class="text-sm text-white/60 mt-1" id="lightbox-venue"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Filters
+    const tabs = document.querySelectorAll('.filter-tab');
+    const items = document.querySelectorAll('.portfolio-item');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.getAttribute('data-filter');
+      items.forEach(item => {
+        const match = filter === 'all' || item.getAttribute('data-type') === filter;
+        (item as HTMLElement).style.display = match ? '' : 'none';
+      });
+    }));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox')!;
+    const lbImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lbName = document.getElementById('lightbox-name')!;
+    const lbVenue = document.getElementById('lightbox-venue')!;
+    const lbClose = lightbox.querySelector('.lightbox-close')!;
+
+    items.forEach(item => item.addEventListener('click', () => {
+      lbImg.src = item.getAttribute('data-full') || '';
+      lbImg.alt = item.querySelector('img')?.alt || '';
+      lbName.textContent = item.getAttribute('data-name') || '';
+      lbVenue.textContent = item.getAttribute('data-venue') || '';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }));
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+  </script>
+</Layout>

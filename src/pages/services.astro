@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  { q: "How far in advance should we book?", a: "We recommend reaching out 12–18 months before your wedding date, or 3–6 months for corporate and private events. That said, we've pulled off beautiful events on shorter timelines — don't hesitate to enquire." },
+  { q: "Do you work with specific venues?", a: "We're venue-agnostic and love discovering new spaces. We've designed events at over 60 venues across Sydney and regional NSW, from heritage estates to modern waterfront spaces. We're happy to recommend venues that suit your style and budget." },
+  { q: "Can we customise a package?", a: "Absolutely. Our packages are starting points — we tailor every engagement to fit your needs. During our discovery session, we'll build a scope and quote that's right for you." },
+  { q: "What's included in 'on-the-day' coordination?", a: "Our coordination package covers a detailed run sheet, vendor confirmations, venue walk-through, a full rehearsal, and 10+ hours of on-site management on your event day. We handle every logistical detail so you can be fully present." },
+  { q: "Do you handle destination events?", a: "Yes — we've designed events across the Hunter Valley, Southern Highlands, South Coast, and Byron Bay. Travel fees apply for events outside Greater Sydney. Enquire for a custom quote." },
+];
+---
+<Layout title="Services & Packages — Evergreen Events">
+  <!-- Hero -->
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="section-label mb-3">How We Work</p>
+      <h1 class="font-heading text-4xl md:text-5xl mb-4">Services &amp; Packages</h1>
+      <p class="text-[var(--color-text-secondary)] max-w-xl mx-auto">From first consultation to final farewell, we manage every detail — so you can enjoy every moment.</p>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="py-24 px-6 bg-[var(--color-cream)]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label mb-3">The Process</p>
+        <h2 class="font-heading text-3xl md:text-4xl">Four Steps to Your Perfect Event</h2>
+      </div>
+      <div class="relative pl-16">
+        <div class="timeline-line"></div>
+        <div class="space-y-12">
+          <div class="flex gap-6 reveal">
+            <div class="timeline-dot">1</div>
+            <div class="pt-2">
+              <h3 class="font-heading text-xl mb-2">Discovery</h3>
+              <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">We begin with a complimentary consultation — over coffee, on a call, or at your preferred venue. We learn your vision, style, budget, and non-negotiables.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 reveal">
+            <div class="timeline-dot">2</div>
+            <div class="pt-2">
+              <h3 class="font-heading text-xl mb-2">Design</h3>
+              <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">We develop a tailored concept — mood boards, colour palettes, vendor shortlists, floor plans, and a detailed proposal. Every element is chosen to reflect your story.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 reveal">
+            <div class="timeline-dot">3</div>
+            <div class="pt-2">
+              <h3 class="font-heading text-xl mb-2">Coordination</h3>
+              <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">We manage timelines, vendor communications, contracts, and logistics. Regular check-ins keep everything on track while you focus on the excitement ahead.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 reveal">
+            <div class="timeline-dot">4</div>
+            <div class="pt-2">
+              <h3 class="font-heading text-xl mb-2">The Day</h3>
+              <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">On the day, our team is on-site from set-up to send-off — directing vendors, managing the run sheet, and handling anything that arises. You enjoy every moment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label mb-3">Packages</p>
+        <h2 class="font-heading text-3xl md:text-4xl">Choose Your Level of Support</h2>
+        <p class="text-[var(--color-text-secondary)] mt-4 max-w-xl mx-auto">Every package is fully customisable. Pricing is a guide — we'll tailor a quote after our initial consultation.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Coordination -->
+        <div class="package-card text-center reveal">
+          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Coordination</p>
+          <h3 class="font-heading text-3xl mb-1">From $3,500</h3>
+          <p class="text-sm text-[var(--color-text-secondary)] mb-8">Perfect for couples who have planned their event but need expert management on the day.</p>
+          <ul class="text-sm text-left space-y-3 mb-10">
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Detailed event run sheet</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Vendor confirmation &amp; briefing</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Venue walk-through &amp; rehearsal</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>10 hours on-site management</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Emergency kit &amp; contingency planning</li>
+          </ul>
+          <a href="/enquiry" class="btn-outline-ev w-full">Enquire Now</a>
+        </div>
+        <!-- Partial Planning -->
+        <div class="package-card popular text-center reveal">
+          <span class="inline-block px-4 py-1 bg-[var(--color-sage)] text-white text-[0.625rem] font-bold tracking-[2px] uppercase mb-6">Most Popular</span>
+          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Partial Planning</p>
+          <h3 class="font-heading text-3xl mb-1">From $7,500</h3>
+          <p class="text-sm text-[var(--color-text-secondary)] mb-8">For those who want guidance on key decisions while handling some elements themselves.</p>
+          <ul class="text-sm text-left space-y-3 mb-10">
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Everything in Coordination</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Venue &amp; vendor recommendations</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Design concept &amp; mood boards</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Budget management</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Monthly planning check-ins</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Floor plan &amp; styling direction</li>
+          </ul>
+          <a href="/enquiry" class="btn-sage w-full">Enquire Now</a>
+        </div>
+        <!-- Full Design -->
+        <div class="package-card text-center reveal">
+          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-text-secondary)] mb-4">Full Design</p>
+          <h3 class="font-heading text-3xl mb-1">From $15,000</h3>
+          <p class="text-sm text-[var(--color-text-secondary)] mb-8">The complete Evergreen experience — from concept to confetti, we handle everything.</p>
+          <ul class="text-sm text-left space-y-3 mb-10">
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Everything in Partial Planning</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Full design &amp; creative direction</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Vendor sourcing &amp; contracting</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Stationery &amp; signage design</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Guest experience curation</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Unlimited planning sessions</li>
+            <li class="flex gap-3"><span class="text-[var(--color-sage)] mt-0.5">✓</span>Post-event wrap &amp; returns</li>
+          </ul>
+          <a href="/enquiry" class="btn-outline-ev w-full">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 px-6 bg-[var(--color-cream)]">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label mb-3">FAQ</p>
+        <h2 class="font-heading text-3xl md:text-4xl">Common Questions</h2>
+      </div>
+      <div class="reveal">
+        {faqs.map((faq) => (
+          <div>
+            <button class="acc-header" aria-expanded="false">
+              <span>{faq.q}</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">{faq.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6 text-center">
+    <div class="max-w-2xl mx-auto reveal">
+      <h2 class="font-heading-italic text-3xl md:text-4xl mb-4">Ready to Start Planning?</h2>
+      <p class="text-[var(--color-text-secondary)] mb-8">Tell us about your event and we'll be in touch within 24 hours.</p>
+      <a href="/enquiry" class="btn-sage">Make an Enquiry</a>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.acc-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const isOpen = btn.classList.toggle('open');
+        body.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+  </script>
+</Layout>

@@ -12,44 +12,52 @@ const projects = [
 ---
 <Layout title="Portfolio — Evergreen Events">
   <!-- Hero -->
-  <section class="pt-32 pb-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="section-label mb-3">Our Work</p>
-      <h1 class="font-heading text-4xl md:text-5xl mb-4">Portfolio</h1>
-      <p class="text-[var(--color-text-secondary)] max-w-xl mx-auto">A curated collection of weddings, corporate events, and private celebrations we've had the privilege of designing.</p>
+  <section class="pt-36 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5 lg:col-start-2">
+          <p class="section-label mb-4">Our Work</p>
+          <h1 class="font-heading text-5xl md:text-6xl mb-6">Portfolio</h1>
+        </div>
+        <div class="lg:col-span-4 lg:col-start-8 flex items-end pb-2">
+          <p class="text-[var(--color-text-secondary)] leading-relaxed">A curated collection of weddings, corporate events, and private celebrations we've had the privilege of designing.</p>
+        </div>
+      </div>
+      <div class="mt-10 flex items-center gap-4">
+        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
+        <div class="w-1.5 h-1.5 border border-[var(--color-sage)] rotate-45"></div>
+        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
+      </div>
     </div>
   </section>
 
-  <!-- Grid -->
-  <section class="px-6 pb-24">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+  <!-- Grid — Magazine Asymmetric -->
+  <section class="px-6 pb-28">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8 lg:gap-y-14" id="portfolio-grid">
       {projects.map((p, i) => (
-        <div class={`portfolio-item reveal stagger-${(i % 3) + 1}`} style={`aspect-ratio: ${p.ratio};`} data-type={p.type} data-full={p.full} data-name={p.name} data-venue={p.venue}>
-          <img src={p.image} alt={`${p.name} — ${p.venue}`} loading="lazy" />
-          <div class="portfolio-overlay">
-            <div class="overlay-text">
-              <p class="text-xs tracking-[2px] uppercase text-white/70">{p.type}</p>
+        <div class={`reveal stagger-${(i % 3) + 1} ${i % 3 === 1 ? 'lg:mt-16' : ''}`} >
+          <div class="portfolio-item border border-[var(--color-border)]" style={`aspect-ratio: ${p.ratio};`} data-type={p.type} data-full={p.full} data-name={p.name} data-venue={p.venue}>
+            <img src={p.image} alt={`${p.name} — ${p.venue}`} loading="lazy" />
+            <div class="portfolio-overlay">
+              <div class="overlay-text">
+                <p class="text-xs tracking-[2.5px] uppercase text-white/70 font-medium">{p.type}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-    <!-- Project info shown beneath images -->
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-0" id="portfolio-labels">
-      {projects.map((p) => (
-        <div class="pt-3">
-          <h3 class="font-heading-italic text-xl">{p.name}</h3>
-          <p class="text-[0.625rem] tracking-[3px] uppercase text-[var(--color-text-secondary)] mt-1">{p.venue}</p>
+          <div class="pt-4">
+            <h3 class="font-heading-italic text-xl">{p.name}</h3>
+            <p class="text-[0.6875rem] tracking-[2.5px] uppercase text-[var(--color-text-secondary)] mt-1">{p.venue}</p>
+          </div>
         </div>
       ))}
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-24 bg-[var(--color-cream)] text-center px-6">
+  <section class="py-28 bg-[var(--color-cream)] text-center px-6">
     <div class="max-w-2xl mx-auto reveal">
-      <h2 class="font-heading-italic text-3xl md:text-4xl mb-4">Love What You See?</h2>
-      <p class="text-[var(--color-text-secondary)] mb-8">Let's create something beautiful together. Tell us about your vision.</p>
+      <h2 class="font-heading-italic text-4xl md:text-5xl mb-5">Love What You See?</h2>
+      <p class="text-[var(--color-text-secondary)] mb-10 leading-relaxed">Let's create something beautiful together. Tell us about your vision.</p>
       <a href="/enquiry" class="btn-sage">Make an Enquiry</a>
     </div>
   </section>
@@ -59,9 +67,9 @@ const projects = [
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <div class="lightbox-content">
       <img id="lightbox-img" src="" alt="" class="w-full" />
-      <div class="mt-4 text-center text-white">
+      <div class="mt-5 text-center text-white">
         <h3 class="font-heading-italic text-2xl" id="lightbox-name"></h3>
-        <p class="text-sm text-white/60 mt-1" id="lightbox-venue"></p>
+        <p class="text-sm text-white/50 mt-1" id="lightbox-venue"></p>
       </div>
     </div>
   </div>

@@ -17,80 +17,88 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-slide">
       <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1920&h=1080&fit=crop&q=80" alt="Beautifully styled dinner table with floral centrepieces" class="w-full h-full object-cover" />
     </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/50"></div>
     <div class="hero-frame"></div>
-    <div class="relative text-center text-white px-6 max-w-3xl">
-      <p class="section-label !text-white/70 mb-4">Sydney's Award-Winning Event Studio</p>
-      <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-8xl mb-6">Your Day, Designed</h1>
-      <p class="text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-xl mx-auto">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
+    <div class="relative text-center text-white px-6 max-w-3xl z-10">
+      <p class="section-label !text-white/60 mb-5">Sydney's Award-Winning Event Studio</p>
+      <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-[6.5rem] leading-[0.95] mb-8">Your Day, Designed</h1>
+      <p class="text-lg sm:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto text-white/85">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
       <a href="/enquiry" class="btn-sage">Start Planning</a>
     </div>
   </section>
 
   <!-- As Featured In -->
-  <section class="py-20 bg-white border-y border-[var(--color-border)]">
+  <section class="py-16 border-b border-[var(--color-border)]">
     <div class="max-w-5xl mx-auto px-6">
-      <p class="text-center text-xs font-semibold tracking-[3px] uppercase text-[var(--color-text-secondary)] mb-8">As Featured In</p>
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <span class="featured-logo font-heading-italic text-3xl text-[var(--color-text-secondary)]/60">Vogue Bride</span>
-        <span class="featured-logo font-heading text-xl tracking-[4px] uppercase text-[var(--color-text-secondary)]/60">Hello May</span>
-        <span class="featured-logo font-heading-italic text-2xl text-[var(--color-text-secondary)]/60">Nouba</span>
-        <span class="featured-logo font-heading text-lg tracking-[6px] uppercase font-semibold text-[var(--color-text-secondary)]/60">The Lane</span>
+      <p class="text-center text-[0.6875rem] font-medium tracking-[3px] uppercase text-[var(--color-text-secondary)] mb-10">As Featured In</p>
+      <div class="flex flex-wrap items-center justify-center gap-5">
+        <span class="featured-logo font-heading-italic text-3xl text-[var(--color-text-secondary)]/50">Vogue Bride</span>
+        <span class="featured-logo font-heading text-xl tracking-[4px] uppercase text-[var(--color-text-secondary)]/50">Hello May</span>
+        <span class="featured-logo font-heading-italic text-2xl text-[var(--color-text-secondary)]/50">Nouba</span>
+        <span class="featured-logo font-heading text-lg tracking-[6px] uppercase font-semibold text-[var(--color-text-secondary)]/50">The Lane</span>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 reveal">
-        <p class="section-label mb-3">What We Do</p>
-        <h2 class="font-heading text-4xl md:text-5xl">Events Worth Remembering</h2>
+  <!-- Services Overview — Editorial Asymmetric Layout -->
+  <section class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20">
+        <div class="lg:col-span-4 lg:col-start-2 reveal">
+          <p class="section-label mb-4">What We Do</p>
+          <h2 class="font-heading text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.05]">Events Worth Remembering</h2>
+        </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         <a href="/services" class="group reveal stagger-1 service-card">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=600&h=800&fit=crop&q=80" alt="Bride holding a white bouquet at an outdoor ceremony" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
-          <h3 class="font-heading text-2xl mb-2 mt-5">Weddings</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">From intimate garden ceremonies to grand harbour-side receptions — we bring your love story to life with beauty and precision.</p>
+          <div class="service-card-inner">
+            <h3 class="font-heading text-2xl mb-3">Weddings</h3>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">From intimate garden ceremonies to grand harbour-side receptions — we bring your love story to life with beauty and precision.</p>
+          </div>
         </a>
-        <a href="/services" class="group reveal stagger-2 service-card">
+        <a href="/services" class="group reveal stagger-2 service-card md:mt-12">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1766164416026-1a823688d106?w=600&h=800&fit=crop&q=80" alt="Elegant corporate dining setup with candles and place settings" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
-          <h3 class="font-heading text-2xl mb-2 mt-5">Corporate Events</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">Launches, galas, and brand activations designed to impress — polished production with personality.</p>
+          <div class="service-card-inner">
+            <h3 class="font-heading text-2xl mb-3">Corporate Events</h3>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">Launches, galas, and brand activations designed to impress — polished production with personality.</p>
+          </div>
         </a>
-        <a href="/services" class="group reveal stagger-3 service-card">
+        <a href="/services" class="group reveal stagger-3 service-card md:mt-24">
           <div class="aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=600&h=800&fit=crop&q=80" alt="Beautifully styled private dinner table with floral centrepieces" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
-          <h3 class="font-heading text-2xl mb-2 mt-5">Private Celebrations</h3>
-          <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">Milestone birthdays, engagement parties, and intimate gatherings — moments that deserve the extra touch.</p>
+          <div class="service-card-inner">
+            <h3 class="font-heading text-2xl mb-3">Private Celebrations</h3>
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">Milestone birthdays, engagement parties, and intimate gatherings — moments that deserve the extra touch.</p>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Wedding -->
-  <section class="py-24 bg-[var(--color-cream)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="reveal">
+  <!-- Featured Wedding — Editorial Split -->
+  <section class="py-28 bg-[var(--color-cream)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-center">
+        <div class="lg:col-span-6 reveal">
           <div class="featured-image-frame">
             <div class="aspect-[4/5] overflow-hidden">
               <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=800&h=1000&fit=crop&q=80" alt="Sarah and James on their wedding day by Sydney Harbour" class="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
-        <div class="reveal">
-          <p class="section-label mb-4">Featured Wedding</p>
-          <h2 class="font-heading-italic text-4xl md:text-5xl mb-6">Sarah &amp; James</h2>
-          <p class="text-xs font-semibold tracking-[2px] uppercase text-[var(--color-dusty-rose)] mb-6">A Harbour-Side Celebration</p>
-          <div class="thin-divider mb-6"></div>
-          <p class="text-[var(--color-text-secondary)] leading-relaxed mb-4">What began as a vision for an intimate 80-guest celebration along Sydney Harbour became a breathtaking afternoon of coastal elegance — from the white orchid arch framing the Harbour Bridge to the candlelit reception at Sergeants' Mess.</p>
-          <p class="text-[var(--color-text-secondary)] leading-relaxed mb-8">Every detail was thoughtfully curated: hand-lettered calligraphy, a bespoke floral palette of ivory roses and silver-dollar eucalyptus, and a three-course menu by Matt Moran's team. The result? An effortless, magazine-worthy day that felt unmistakably <em>them</em>.</p>
+        <div class="lg:col-span-5 lg:col-start-8 reveal">
+          <p class="section-label mb-5">Featured Wedding</p>
+          <h2 class="font-heading-italic text-5xl md:text-6xl mb-3">Sarah &amp; James</h2>
+          <p class="text-xs font-medium tracking-[2.5px] uppercase text-[var(--color-mauve)] mb-8">A Harbour-Side Celebration</p>
+          <div class="thin-divider mb-8"></div>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed mb-5">What began as a vision for an intimate 80-guest celebration along Sydney Harbour became a breathtaking afternoon of coastal elegance — from the white orchid arch framing the Harbour Bridge to the candlelit reception at Sergeants' Mess.</p>
+          <p class="text-[var(--color-text-secondary)] leading-relaxed mb-10">Every detail was thoughtfully curated: hand-lettered calligraphy, a bespoke floral palette of ivory roses and silver-dollar eucalyptus, and a three-course menu by Matt Moran's team. The result? An effortless, magazine-worthy day that felt unmistakably <em>them</em>.</p>
           <div class="flex flex-wrap gap-4">
             <a href="/portfolio" class="btn-outline-ev">View Full Gallery</a>
             <a href="/enquiry#booking" class="btn-sage">Book a Discovery Call</a>
@@ -100,24 +108,28 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Testimonial -->
+  <!-- Testimonial — Pull Quote Style -->
   <section class="py-32 px-6">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       <div class="testimonial-card-ev text-center reveal">
-        <svg class="mx-auto mb-8 text-[var(--color-sage-light)]" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.68 11 13.173 11 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.68 21 13.173 21 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179z"/></svg>
-        <blockquote class="font-heading-italic text-2xl md:text-3xl leading-relaxed mb-8">"From the first meeting to the last dance, the Evergreen team made everything feel effortless. Our wedding was beyond anything we imagined — elegant, personal, and absolutely magical."</blockquote>
-        <p class="text-sm font-semibold tracking-[2px] uppercase text-[var(--color-sage-light)]">Sarah &amp; James Whitfield</p>
-        <p class="text-xs text-[var(--color-text-secondary)] mt-1">Sergeants' Mess, Mosman — March 2025</p>
+        <svg class="mx-auto mb-10 text-[var(--color-sage-muted)]" width="44" height="44" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.68 11 13.173 11 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.68 21 13.173 21 15c0 1.933-1.567 3.5-3.5 3.5-1.312 0-2.508-.629-2.917-1.179z"/></svg>
+        <blockquote class="font-heading-italic text-2xl md:text-[2rem] leading-relaxed mb-10 max-w-2xl mx-auto">"From the first meeting to the last dance, the Evergreen team made everything feel effortless. Our wedding was beyond anything we imagined — elegant, personal, and absolutely magical."</blockquote>
+        <div class="flex items-center justify-center gap-4 mb-1">
+          <div class="w-8 h-px bg-[var(--color-gold)]"></div>
+          <p class="text-xs font-medium tracking-[2.5px] uppercase text-[var(--color-sage)]">Sarah &amp; James Whitfield</p>
+          <div class="w-8 h-px bg-[var(--color-gold)]"></div>
+        </div>
+        <p class="text-xs text-[var(--color-text-secondary)] mt-2">Sergeants' Mess, Mosman — March 2025</p>
       </div>
     </div>
   </section>
 
   <!-- Instagram Feed -->
-  <section class="py-24 px-6 bg-[var(--color-cream)]">
+  <section class="py-28 px-6 bg-[var(--color-cream)]">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <p class="section-label mb-3">Instagram</p>
-        <h2 class="font-heading-italic text-3xl md:text-4xl">Follow Along <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-sage)] transition-colors">@evergreenevents_</a></h2>
+      <div class="text-center mb-14 reveal">
+        <p class="section-label mb-4">Instagram</p>
+        <h2 class="font-heading-italic text-3xl md:text-4xl">Follow Along <a href="https://www.instagram.com/evergreenevents_" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-gold)] transition-colors">@evergreenevents_</a></h2>
       </div>
       <div class="insta-grid-frame reveal">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">

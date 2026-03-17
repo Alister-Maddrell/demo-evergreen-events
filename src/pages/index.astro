@@ -3,17 +3,64 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Evergreen Events — Your Day, Designed">
   <!-- Hero -->
-  <section class="hero-section relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden">
+  <section class="hero-section relative min-h-dvh flex items-center overflow-hidden">
     <div class="absolute inset-0">
       <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=80" alt="Elegant reception venue with warm string lights at dusk" class="w-full h-full object-cover hero-img" />
     </div>
     <div class="absolute inset-0 hero-overlay"></div>
-    <div class="hero-frame"></div>
-    <div class="relative text-center text-white px-6 max-w-3xl z-10 hero-content">
-      <p class="section-label !text-white/60 mb-5">Sydney's Award-Winning Event Studio</p>
-      <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-[6.5rem] leading-[0.95] mb-8">Your Day, Designed</h1>
-      <p class="text-lg sm:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto text-white/85">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
-      <a href="/enquiry" class="btn-sage">Start Planning</a>
+
+    <!-- Decorative vertical line -->
+    <div class="hero-vert-line hidden lg:block"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-dvh py-32">
+        <!-- Left text panel -->
+        <div class="lg:col-span-6 lg:col-start-1">
+          <div class="hero-content">
+            <div class="hero-overline mb-8">
+              <span class="hero-overline-line"></span>
+              <p class="section-label !text-white/50">Sydney's Award-Winning Event Studio</p>
+            </div>
+            <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] leading-[0.88] mb-10 hero-title">
+              <span class="hero-title-line" style="--delay: 0">Your</span><br/>
+              <span class="hero-title-line" style="--delay: 1">Day,</span><br/>
+              <span class="hero-title-line hero-title-accent" style="--delay: 2">Designed</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-light leading-relaxed mb-12 max-w-lg text-white/80 hero-fade-up" style="--delay: 3">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
+            <div class="flex flex-wrap gap-5 hero-fade-up" style="--delay: 4">
+              <a href="/enquiry" class="btn-sage">Start Planning</a>
+              <a href="/portfolio" class="btn-outline-ev !border-white/30 !text-white hover:!bg-white/10">View Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right decorative image -->
+        <div class="hidden lg:block lg:col-span-5 lg:col-start-8">
+          <div class="hero-image-stack">
+            <div class="hero-image-main">
+              <div class="hero-image-frame-inner">
+                <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=600&h=800&fit=crop&q=80" alt="Bridal bouquet detail" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="hero-image-secondary">
+              <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=300&h=400&fit=crop&q=80" alt="Table styling detail" class="w-full h-full object-cover" />
+            </div>
+            <div class="hero-image-badge">
+              <span class="font-heading-italic text-2xl text-white">Est.</span>
+              <span class="font-heading text-4xl text-[var(--color-gold)]">2016</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hero-scroll-indicator z-10">
+      <div class="flex flex-col items-center gap-3">
+        <span class="text-[0.6rem] font-medium tracking-[4px] uppercase text-white/30">Scroll</span>
+        <div class="w-px h-10 bg-gradient-to-b from-white/30 to-transparent hero-scroll-line"></div>
+      </div>
     </div>
   </section>
 

@@ -3,23 +3,13 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Evergreen Events — Your Day, Designed">
   <!-- Hero -->
-  <section class="relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden">
-    <!-- Slideshow -->
-    <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=80" alt="Couple walking through a sun-drenched garden on their wedding day" class="w-full h-full object-cover" />
+  <section class="hero-section relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&h=1080&fit=crop&q=80" alt="Beautiful outdoor event with warm string lights at dusk" class="w-full h-full object-cover hero-img" />
     </div>
-    <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1529635859953-7f7b2f931435?w=1920&h=1080&fit=crop&q=80" alt="Bride holding a white bouquet at an outdoor ceremony" class="w-full h-full object-cover" />
-    </div>
-    <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?w=1920&h=1080&fit=crop&q=80" alt="Wedding reception with elegant table settings" class="w-full h-full object-cover" />
-    </div>
-    <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?w=1920&h=1080&fit=crop&q=80" alt="Beautifully styled dinner table with floral centrepieces" class="w-full h-full object-cover" />
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/50"></div>
+    <div class="absolute inset-0 hero-overlay"></div>
     <div class="hero-frame"></div>
-    <div class="relative text-center text-white px-6 max-w-3xl z-10">
+    <div class="relative text-center text-white px-6 max-w-3xl z-10 hero-content">
       <p class="section-label !text-white/60 mb-5">Sydney's Award-Winning Event Studio</p>
       <h1 class="font-heading-italic text-6xl sm:text-7xl md:text-[6.5rem] leading-[0.95] mb-8">Your Day, Designed</h1>
       <p class="text-lg sm:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto text-white/85">We craft unforgettable weddings, corporate events, and private celebrations — with meticulous detail and genuine heart.</p>
@@ -32,16 +22,16 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-5xl mx-auto px-6">
       <p class="text-center text-[0.6875rem] font-medium tracking-[3px] uppercase text-[var(--color-text-secondary)] mb-10">As Featured In</p>
       <div class="flex flex-wrap items-center justify-center gap-5">
-        <span class="featured-logo font-heading-italic text-3xl text-[var(--color-text-secondary)]/50">Vogue Bride</span>
-        <span class="featured-logo font-heading text-xl tracking-[4px] uppercase text-[var(--color-text-secondary)]/50">Hello May</span>
-        <span class="featured-logo font-heading-italic text-2xl text-[var(--color-text-secondary)]/50">Nouba</span>
-        <span class="featured-logo font-heading text-lg tracking-[6px] uppercase font-semibold text-[var(--color-text-secondary)]/50">The Lane</span>
+        <span class="featured-logo font-heading-italic text-3xl text-[var(--color-text-secondary)]/70">Vogue Bride</span>
+        <span class="featured-logo font-heading text-xl tracking-[4px] uppercase text-[var(--color-text-secondary)]/70">Hello May</span>
+        <span class="featured-logo font-heading-italic text-2xl text-[var(--color-text-secondary)]/70">Nouba</span>
+        <span class="featured-logo font-heading text-lg tracking-[6px] uppercase font-semibold text-[var(--color-text-secondary)]/70">The Lane</span>
       </div>
     </div>
   </section>
 
   <!-- Services Overview — Editorial Asymmetric Layout -->
-  <section class="py-28 px-6">
+  <section class="py-32 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-20">
         <div class="lg:col-span-4 lg:col-start-2 reveal">
@@ -82,7 +72,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Featured Wedding — Editorial Split -->
-  <section class="py-28 bg-[var(--color-cream)]">
+  <section class="py-32 bg-[var(--color-cream)]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-center">
         <div class="lg:col-span-6 reveal">
@@ -125,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Instagram Feed -->
-  <section class="py-28 px-6 bg-[var(--color-cream)]">
+  <section class="py-32 px-6 bg-[var(--color-cream)]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-14 reveal">
         <p class="section-label mb-4">Instagram</p>

@@ -121,11 +121,11 @@ const { title, description = "Evergreen Events — Sydney's award-winning weddin
       document.documentElement.style.scrollBehavior = 'auto';
       document.querySelectorAll('img[loading="lazy"]').forEach(img => (img as HTMLImageElement).loading = 'eager');
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-      // Disable hero slideshow to prevent flashing during scroll preview
-      document.querySelectorAll('.hero-slide').forEach((slide, i) => {
-        (slide as HTMLElement).style.animation = 'none';
-        (slide as HTMLElement).style.opacity = i === 0 ? '1' : '0';
-      });
+      // Disable hero animations during scroll preview
+      const heroImg = document.querySelector('.hero-img') as HTMLElement;
+      if (heroImg) heroImg.style.animation = 'none';
+      const heroContent = document.querySelector('.hero-content') as HTMLElement;
+      if (heroContent) heroContent.style.animation = 'none';
       let scrolling = false, pos = 0, dir = 1, last = 0, rafId = 0;
       const pxPerSec = 150;
       function autoScroll(ts: number) { if (!scrolling) return; if (!last) last = ts;

@@ -968,6 +968,65 @@ section[class*="bg-[var(--color-cream)]"] {
   50% { opacity: 0.8; transform: scaleY(1.2); }
 }
 
+/* ═══════════════════════════════════════════
+   FLOATING BOOKING BUTTON
+   ═══════════════════════════════════════════ */
+.floating-book-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 45;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.floating-book-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-book-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(165deg, #C9A647 0%, var(--color-gold) 40%, var(--color-gold-dark) 100%);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow:
+    0 8px 32px rgba(184, 150, 62, 0.3),
+    0 2px 8px rgba(184, 150, 62, 0.15);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.floating-book-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, #D4B255 0%, #C9A647 40%, var(--color-gold) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.floating-book-link:hover::before { opacity: 1; }
+.floating-book-link:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(184, 150, 62, 0.4),
+    0 4px 12px rgba(184, 150, 62, 0.2);
+}
+.floating-book-link > * { position: relative; z-index: 1; }
+
+/* Hide on mobile — show compact icon only */
+@media (max-width: 639px) {
+  .floating-book-label { display: none; }
+  .floating-book-link { padding: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   html { scroll-behavior: auto; }

@@ -97,55 +97,16 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <div class="flex items-center justify-center gap-4 my-20">
-        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
-        <span class="text-[0.6875rem] font-medium tracking-[2px] uppercase text-[var(--color-text-secondary)]">Or book a call directly</span>
-        <div class="flex-1 h-px bg-[var(--color-border)]"></div>
-      </div>
-
-      <!-- CAL.COM BOOKING -->
-      <div id="booking" class="max-w-2xl mx-auto reveal">
-        <div class="text-center mb-12">
-          <p class="section-label mb-4">Book a Call</p>
-          <h2 class="font-heading text-4xl md:text-5xl mb-5">Schedule a Discovery Call</h2>
-          <p class="text-[var(--color-text-secondary)] max-w-lg mx-auto text-sm leading-relaxed">Pick a time for a free 30-minute call to discuss your event vision, budget, and next steps.</p>
+      <!-- Prefer to book a call -->
+      <div class="max-w-xl mx-auto text-center mt-16 reveal">
+        <div class="border border-[var(--color-border)] bg-[var(--color-cream)] p-10">
+          <p class="section-label mb-3">Prefer to Chat?</p>
+          <h3 class="font-heading text-2xl mb-4">Book a Discovery Call</h3>
+          <p class="text-sm text-[var(--color-text-secondary)] mb-6 leading-relaxed">Schedule a free 30-minute call to discuss your vision in person.</p>
+          <a href="/booking" class="btn-sage">Book a Call</a>
         </div>
-        <div id="cal-embed" style="width:100%; min-height:450px; overflow:auto; border: 1px solid var(--color-border); background: white;"></div>
       </div>
     </div>
   </section>
 
-  <script>
-    // Cal.com namespace embed loader
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.ns = {};
-          cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api = function () { p(api, arguments); };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
-          return;
-        }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-
-    Cal("init", { origin: "https://cal.com" });
-    Cal("inline", {
-      calLink: "alister-maddrell-rmtqo9/discovery",
-      elementOrSelector: "#cal-embed",
-      config: { theme: "light", styles: { branding: { brandColor: "#B8963E" } } }
-    });
-    Cal("ui", { hideEventTypeDetails: false });
-  </script>
 </Layout>

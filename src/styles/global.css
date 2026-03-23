@@ -1021,6 +1021,50 @@ section[class*="bg-[var(--color-cream)]"] {
 }
 .floating-book-link > * { position: relative; z-index: 1; }
 
+/* ══════════════════════════════════════════
+   MOBILE HERO — compact nav, better content placement
+   ══════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* Compact nav: override Tailwind h-[100px] → 56px */
+  .nav-ev .flex.items-center.justify-between {
+    height: 56px !important;
+  }
+
+  /* Smaller logo on mobile */
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+
+  /* Hero grid: reduce vertical padding so content sits higher */
+  .hero-section .grid {
+    padding-top: 18vh !important;
+    padding-bottom: 4rem !important;
+    align-items: flex-start;
+  }
+
+  /* Tighter spacing in hero content for mobile */
+  .hero-content .hero-overline {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Reduce heading bottom margin on mobile */
+  .hero-content h1 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Reduce paragraph bottom margin on mobile */
+  .hero-content p {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Slightly smaller buttons on mobile to ensure both fit */
+  .hero-content .btn-sage,
+  .hero-content .btn-outline-ev {
+    padding: 14px 32px;
+    font-size: 0.75rem;
+  }
+}
+
 /* Hide on mobile — show compact icon only */
 @media (max-width: 639px) {
   .floating-book-label { display: none; }

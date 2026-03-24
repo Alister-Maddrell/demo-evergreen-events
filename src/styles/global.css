@@ -23,7 +23,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0; padding: 0;
@@ -608,6 +612,12 @@ section.bg-\[var\(--color-cream\)\] p[class*="text-secondary"] {
 .hero-img {
   transform: scale(1.03);
   animation: heroZoom 20s ease-out forwards;
+  max-width: 100%;
+}
+
+/* Ensure hero image container clips overflow from scale animation */
+.hero-section > .absolute.inset-0 {
+  overflow: hidden;
 }
 
 @keyframes heroZoom {
@@ -1048,11 +1058,13 @@ section[class*="bg-[var(--color-cream)]"] {
     font-size: 1.5rem;
   }
 
-  /* Invitation frame — tighter on mobile */
+  /* Invitation frame — tighter on mobile, content pushed higher */
   .hero-invitation-frame {
     margin: 16px;
     padding: 36px 20px;
     min-height: calc(100dvh - 32px);
+    align-items: flex-start;
+    padding-top: 80px;
   }
 
   /* Tighter spacing in hero content for mobile */

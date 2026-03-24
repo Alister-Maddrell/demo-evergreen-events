@@ -1057,11 +1057,23 @@ section[class*="bg-[var(--color-cream)]"] {
     margin-bottom: 2rem !important;
   }
 
-  /* Slightly smaller buttons on mobile to ensure both fit */
+  /* Hero buttons: side-by-side, compact, refined */
+  .hero-content .flex-wrap {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
   .hero-content .btn-sage,
   .hero-content .btn-outline-ev {
-    padding: 14px 32px;
-    font-size: 0.75rem;
+    padding: 13px 20px;
+    font-size: 0.6875rem;
+    letter-spacing: 1.8px;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .hero-content .btn-outline-ev {
+    border-width: 1px;
   }
 }
 

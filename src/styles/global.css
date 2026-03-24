@@ -1121,3 +1121,8 @@ section[class*="bg-[var(--color-cream)]"] {
   .reveal { opacity: 1; transform: none; }
   .parallax-img { transform: none !important; }
 }
+
+/* Clip scaled hero images on mobile */
+@media (max-width: 767px) {
+  html { overflow-x: clip !important; }
+}

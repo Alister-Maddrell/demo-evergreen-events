@@ -9,40 +9,38 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="absolute inset-0 hero-overlay"></div>
 
-    <!-- Invitation frame -->
+    <!-- Invitation frame — editorial layout, content distributed top to bottom -->
     <div class="hero-invitation-frame relative z-10">
-      <div class="hero-content text-center">
-        <!-- Overline -->
+      <!-- FRAME TOP: overline + accent -->
+      <div class="hero-frame-top text-center">
         <p class="hero-overline-text section-label !text-white/50 hero-fade-up" style="--delay: 0">Sydney's Award-Winning Event Studio</p>
-
-        <!-- Decorative gold accent -->
         <div class="hero-gold-accent hero-fade-up" style="--delay: 0.5">
           <span class="hero-accent-dot"></span>
           <span class="hero-accent-line"></span>
           <span class="hero-accent-dot"></span>
         </div>
+      </div>
 
-        <!-- Heading -->
+      <!-- FRAME MIDDLE: heading + tagline -->
+      <div class="hero-frame-middle text-center hero-content">
         <h1 class="font-heading-italic hero-title hero-fade-up" style="--delay: 1">
           Your Day, <em class="hero-title-accent">Designed</em>
         </h1>
-
-        <!-- Tagline -->
         <p class="hero-tagline text-white/75 font-light hero-fade-up" style="--delay: 1.5">Unforgettable weddings, corporate events &amp; private celebrations — crafted with meticulous detail and genuine heart.</p>
+      </div>
 
-        <!-- CTAs stacked -->
+      <!-- FRAME BOTTOM: CTAs + scroll indicator -->
+      <div class="hero-frame-bottom text-center">
         <div class="hero-ctas hero-fade-up" style="--delay: 2">
           <a href="/enquiry" class="btn-sage hero-cta-primary">Start Planning</a>
           <a href="/portfolio" class="hero-cta-outline">View Portfolio</a>
         </div>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hero-scroll-indicator z-10">
-      <div class="flex flex-col items-center gap-3">
-        <span class="text-[0.6rem] font-medium tracking-[4px] uppercase text-white/30">Scroll</span>
-        <div class="w-px h-10 bg-gradient-to-b from-white/30 to-transparent hero-scroll-line"></div>
+        <div class="hero-scroll-indicator hero-fade-up" style="--delay: 2.5">
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-[0.6rem] font-medium tracking-[4px] uppercase text-white/30">Scroll</span>
+            <div class="w-px h-8 bg-gradient-to-b from-white/30 to-transparent hero-scroll-line"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

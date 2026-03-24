@@ -1057,19 +1057,20 @@ section[class*="bg-[var(--color-cream)]"] {
     margin-bottom: 2rem !important;
   }
 
-  /* Hero buttons: side-by-side, compact, refined */
+  /* Hero buttons: stacked, full-width, refined */
   .hero-content .flex-wrap {
-    gap: 12px;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .hero-content .btn-sage,
   .hero-content .btn-outline-ev {
-    padding: 13px 20px;
+    padding: 13px 28px;
     font-size: 0.6875rem;
-    letter-spacing: 1.8px;
-    flex: 1 1 0;
-    min-width: 0;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .hero-content .btn-outline-ev {

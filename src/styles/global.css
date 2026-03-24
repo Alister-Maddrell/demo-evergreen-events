@@ -849,7 +849,7 @@ section[class*="bg-[var(--color-cream)]"] {
 
 /* Overline text */
 .hero-overline-text {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 /* Decorative gold accent — dots and line */
@@ -858,7 +858,7 @@ section[class*="bg-[var(--color-cream)]"] {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-accent-line {
@@ -902,7 +902,7 @@ section[class*="bg-[var(--color-cream)]"] {
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
